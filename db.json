@@ -1,0 +1,276 @@
+{
+  "cars": [
+    {
+      "id": "as1",
+      "model": "Civic",
+      "brand": "Honda",
+      "color": "Black",
+      "price": 22000,
+      "image": "images/Honda.jpeg"
+    },
+    {
+      "id": "asw",
+      "model": "Lantis",
+      "brand": "Mazda",
+      "color": "Blue",
+      "price": 18000,
+      "image": "images/Mazda.jpeg"
+    },
+    {
+      "id": "as2",
+      "model": "Accord",
+      "brand": "Honda",
+      "color": "White",
+      "price": 25000,
+      "image": "images/Honda.jpeg"
+    },
+    {
+      "id": "as3",
+      "model": "Camry",
+      "brand": "Toyota",
+      "color": "Red",
+      "price": 27000,
+      "image": "images/Toyota.jpeg"
+    },
+    {
+      "id": "as4",
+      "model": "Mustang",
+      "brand": "Ford",
+      "color": "Yellow",
+      "price": 35000,
+      "image": "images/Ford.jpeg"
+    },
+    {
+      "id": "as5",
+      "model": "A4",
+      "brand": "Audi",
+      "color": "Silver",
+      "price": 40000,
+      "image": "images/Audi.jpeg"
+    },
+    {
+      "id": "as6",
+      "model": "C-Class",
+      "brand": "Mercedes-Benz",
+      "color": "Gray",
+      "price": 42000,
+      "image": "images/Mercedes.jpeg"
+    },
+    {
+      "id": "as7",
+      "model": "X5",
+      "brand": "BMW",
+      "color": "Blue",
+      "price": 50000,
+      "image": "images/BMW.jpeg"
+    },
+    {
+      "id": "as8",
+      "model": "Impreza",
+      "brand": "Subaru",
+      "color": "Green",
+      "price": 23000,
+      "image": "images/Subaru.jpeg"
+    },
+    {
+      "id": "as9",
+      "model": "Sentra",
+      "brand": "Nissan",
+      "color": "Orange",
+      "price": 19000,
+      "image": "images/Nissan.jpeg"
+    },
+    {
+      "id": "as10",
+      "model": "Altima",
+      "brand": "Nissan",
+      "color": "Purple",
+      "price": 21000,
+      "image": "images/Nissan.jpeg"
+    },
+    {
+      "id": "as11",
+      "model": "Soul",
+      "brand": "Kia",
+      "color": "Brown",
+      "price": 20000,
+      "image": "images/Kia.jpeg"
+    },
+    {
+      "id": "as12",
+      "model": "Corolla",
+      "brand": "Toyota",
+      "color": "Beige",
+      "price": 21000,
+      "image": "images/Toyota.jpeg"
+    },
+    {
+      "id": "as13",
+      "model": "Rogue",
+      "brand": "Nissan",
+      "color": "Teal",
+      "price": 26000,
+      "image": "images/Nissan.jpeg"
+    },
+    {
+      "id": "as14",
+      "model": "Cherokee",
+      "brand": "Jeep",
+      "color": "Gold",
+      "price": 32000,
+      "image": "images/Jeep.jpeg"
+    },
+    {
+      "id": "as15",
+      "model": "Forester",
+      "brand": "Subaru",
+      "color": "Silver",
+      "price": 28000,
+      "image": "images/Subaru.jpeg"
+    },
+    {
+      "id": "as16",
+      "model": "E-Class",
+      "brand": "Mercedes-Benz",
+      "color": "Black",
+      "price": 45000,
+      "image": "images/Mercedes.jpeg"
+    },
+    {
+      "id": "as17",
+      "model": "Tiguan",
+      "brand": "Volkswagen",
+      "color": "White",
+      "price": 29000,
+      "image": "images/Volkswagen.jpeg"
+    },
+    {
+      "id": "as18",
+      "model": "Seltos",
+      "brand": "Kia",
+      "color": "Red",
+      "price": 22000,
+      "image": "images/Kia.jpeg"
+    },
+    {
+      "id": "as19",
+      "model": "Civic Type R",
+      "brand": "Honda",
+      "color": "Yellow",
+      "price": 37000,
+      "image": "images/Honda.jpeg"
+    },
+    {
+      "id": "as20",
+      "model": "Q5",
+      "brand": "Audi",
+      "color": "Blue",
+      "price": 43000,
+      "image": "images/Audi.jpeg"
+    },
+    {
+      "id": "as21",
+      "model": "3 Series",
+      "brand": "BMW",
+      "color": "Gray",
+      "price": 42000,
+      "image": "images/BMW.jpeg"
+    },
+    {
+      "id": "as22",
+      "model": "A6",
+      "brand": "Audi",
+      "color": "Black",
+      "price": 48000,
+      "image": "images/Audi.jpeg"
+    },
+    {
+      "id": "as23",
+      "model": "F-150",
+      "brand": "Ford",
+      "color": "Green",
+      "price": 34000,
+      "image": "images/Ford.jpeg"
+    },
+    {
+      "id": "as24",
+      "model": "RS5",
+      "brand": "Audi",
+      "color": "Red",
+      "price": 62000,
+      "image": "images/Audi.jpeg"
+    },
+    {
+      "id": "as25",
+      "model": "G6",
+      "brand": "Pontiac",
+      "color": "Purple",
+      "price": 21000,
+      "image": "images/Pontiac.jpeg"
+    },
+    {
+      "id": "as26",
+      "model": "Sierra",
+      "brand": "GMC",
+      "color": "Brown",
+      "price": 35000,
+      "image": "images/GMC.jpeg"
+    },
+    {
+      "id": "as27",
+      "model": "Enclave",
+      "brand": "Buick",
+      "color": "Silver",
+      "price": 38000,
+      "image": "images/Buick.jpeg"
+    },
+    {
+      "id": "as28",
+      "model": "Optima",
+      "brand": "Kia",
+      "color": "Blue",
+      "price": 22000,
+      "image": "images/Kia.jpeg"
+    },
+    {
+      "id": "as29",
+      "model": "Mazda3",
+      "brand": "Mazda",
+      "color": "White",
+      "price": 23000,
+      "image": "images/Mazda.jpeg"
+    },
+    {
+      "id": "as30",
+      "model": "Grand Cherokee",
+      "brand": "Jeep",
+      "color": "Gray",
+      "price": 36000,
+      "image": "images/Jeep.jpeg"
+    },
+    {
+      "id": "as31",
+      "model": "Q7",
+      "brand": "Audi",
+      "color": "Black",
+      "price": 55000,
+      "image": "images/Audi.jpeg"
+    },
+    {
+      "id": "as32",
+      "model": "Pilot",
+      "brand": "Honda",
+      "color": "Brown",
+      "price": 34000,
+      "image": "images/Honda.jpeg"
+    },
+    {
+      "id": "eca2",
+      "brand": "Alpha romeo",
+      "model": "Tonale",
+      "color": "red",
+      "price": 46000,
+      "image": "https://upload.wikimedia.org/wikipedia/en/2/2a/Alfa_Romeo_logo.png"
+    }
+  ]
+}

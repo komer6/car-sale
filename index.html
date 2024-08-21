@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <style>
+    .sss {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-rows: auto;
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      width: 100%;
+      max-width: 18rem;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .card-img-top {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 15px;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      font-size: 1rem;
+      text-align: center;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    #carsale {
+      margin: 20px;
+    }
+    #carsale button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #28a745;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #carsale button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div id="carsale">
+    <button onclick="carsalefun()">Looking to sell your car?</button>
+  </div>
+  <div id="display" class="sss"></div>
+  <script>
+    const SERVER = "http://localhost:3000/cars/";
+
+    // Function to add car data to the "carsale" div
+    function addcar() {
+      console.log({
+        brand: carbrand.value,
+        model: carmodel.value,
+        color: carcolor.value,
+        price: Number(carprice.value),
+        image: carimg.value
+      });
+
+      axios.post(SERVER, {
+        brand: carbrand.value,
+        model: carmodel.value,
+        color: carcolor.value,
+        price: Number(carprice.value),
+        image: carimg.value
+      })
+      .then(res => {
+        console.log('Car added:', res.data);
+        writedata(); // Refresh the display after adding the car
+      })
+      .catch(err => {
+        console.error('Error adding car:', err);
+      });
+
+      carsale.innerHTML = '<button onclick="carsalefun()">Looking to sell your car?</button>';
+    }
+
+    del = (carId) =>
+    {
+       
+      axios.delete(`${SERVER}${carId}`)
+        .then(response => {
+          console.log('Car deleted successfully:', response.data);
+          writedata(); 
+        })
+    }
+
+    const writedata = async () => {
+      try {
+        const res = await axios.get(SERVER);
+        const display = document.getElementById('display');
+        display.innerHTML = res.data.map(car => `
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="${car.image}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">${car.brand} ${car.model}</h5>
+              <p class="card-text">${car.price}$ Color: ${car.color}</p>
+              <a href="#" onclick="del('${car.id}')" class="btn">BUY NOW!</a>
+            </div>
+          </div>
+        `).join('');
+      } catch (err) {
+        console.error('Error fetching data:', err);
+      }
+    }
+
+    writedata();
+
+    function carsalefun() {
+      const carsale = document.getElementById('carsale');
+      carsale.innerHTML = `
+        <div class="card" style="width: 18rem;">
+          <img class="" src="images/money.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Goodbye car, hello CASH</h5>
+            <p class="card-text">Model: <input id="carmodel"></p>
+            <p class="card-text">Brand: <input id="carbrand"></p>
+            <p class="card-text">Price: <input id="carprice"></p>
+            <p class="card-text">Color: <input id="carcolor"></p>
+            <p class="card-text">Image URL: <input id="carimg"></p>
+            <a href="#" class="btn" onclick="addcar()">SUBMIT</a>
+            <a href="#" class="btn" onclick="addcar()">SUBMIT</a>
+          </div>
+        </div>
+      `;
+    }
+
+
+    price Changer 
+  </script>
+ 
+</body>
+</html>
