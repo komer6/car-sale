@@ -5,16 +5,56 @@
       "model": "Civic",
       "brand": "Honda",
       "color": "Black",
-      "price": 22000,
-      "image": "images/Honda.jpeg"
+      "price": 0,
+      "image": "images/Honda.jpeg",
+      "bid": 0
     },
     {
-      "id": "asw",
-      "model": "Lantis",
-      "brand": "Mazda",
-      "color": "Blue",
-      "price": 18000,
-      "image": "images/Mazda.jpeg"
+      "data": {
+        "id": "asw",
+        "model": "Lantis",
+        "brand": "Mazda",
+        "color": "Blue",
+        "price": 18000,
+        "image": "images/Mazda.jpeg",
+        "bid": 0
+      },
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "content-length": "139",
+        "content-type": "application/json"
+      },
+      "config": {
+        "transitional": {
+          "silentJSONParsing": true,
+          "forcedJSONParsing": true,
+          "clarifyTimeoutError": false
+        },
+        "adapter": [
+          "xhr",
+          "http"
+        ],
+        "transformRequest": [
+          null
+        ],
+        "transformResponse": [
+          null
+        ],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1,
+        "maxBodyLength": -1,
+        "env": {},
+        "headers": {
+          "Accept": "application/json, text/plain, */*"
+        },
+        "url": "http://localhost:3000/cars/asw",
+        "method": "get"
+      },
+      "request": {},
+      "id": "asw"
     },
     {
       "id": "as2",
@@ -22,23 +62,26 @@
       "brand": "Honda",
       "color": "White",
       "price": 25000,
-      "image": "images/Honda.jpeg"
+      "image": "images/Honda.jpeg",
+      "bid": 0
     },
     {
       "id": "as3",
       "model": "Camry",
       "brand": "Toyota",
       "color": "Red",
-      "price": 27000,
-      "image": "images/Toyota.jpeg"
+      "price": 0,
+      "image": "images/Toyota.jpeg",
+      "bid": 0
     },
     {
       "id": "as4",
       "model": "Mustang",
       "brand": "Ford",
       "color": "Yellow",
-      "price": 35000,
-      "image": "images/Ford.jpeg"
+      "price": 0,
+      "image": "images/Ford.jpeg",
+      "bid": 0
     },
     {
       "id": "as5",
@@ -46,7 +89,8 @@
       "brand": "Audi",
       "color": "Silver",
       "price": 40000,
-      "image": "images/Audi.jpeg"
+      "image": "images/Audi.jpeg",
+      "bid": 0
     },
     {
       "id": "as6",
@@ -54,7 +98,8 @@
       "brand": "Mercedes-Benz",
       "color": "Gray",
       "price": 42000,
-      "image": "images/Mercedes.jpeg"
+      "image": "images/Mercedes.jpeg",
+      "bid": 0
     },
     {
       "id": "as7",
@@ -62,7 +107,8 @@
       "brand": "BMW",
       "color": "Blue",
       "price": 50000,
-      "image": "images/BMW.jpeg"
+      "image": "images/BMW.jpeg",
+      "bid": 0
     },
     {
       "id": "as8",
@@ -70,7 +116,8 @@
       "brand": "Subaru",
       "color": "Green",
       "price": 23000,
-      "image": "images/Subaru.jpeg"
+      "image": "images/Subaru.jpeg",
+      "bid": 0
     },
     {
       "id": "as9",
@@ -78,7 +125,8 @@
       "brand": "Nissan",
       "color": "Orange",
       "price": 19000,
-      "image": "images/Nissan.jpeg"
+      "image": "images/Nissan.jpeg",
+      "bid": 0
     },
     {
       "id": "as10",
@@ -86,7 +134,8 @@
       "brand": "Nissan",
       "color": "Purple",
       "price": 21000,
-      "image": "images/Nissan.jpeg"
+      "image": "images/Nissan.jpeg",
+      "bid": 0
     },
     {
       "id": "as11",
@@ -94,7 +143,8 @@
       "brand": "Kia",
       "color": "Brown",
       "price": 20000,
-      "image": "images/Kia.jpeg"
+      "image": "images/Kia.jpeg",
+      "bid": 0
     },
     {
       "id": "as12",
@@ -102,7 +152,8 @@
       "brand": "Toyota",
       "color": "Beige",
       "price": 21000,
-      "image": "images/Toyota.jpeg"
+      "image": "images/Toyota.jpeg",
+      "bid": 0
     },
     {
       "id": "as13",
@@ -110,7 +161,8 @@
       "brand": "Nissan",
       "color": "Teal",
       "price": 26000,
-      "image": "images/Nissan.jpeg"
+      "image": "images/Nissan.jpeg",
+      "bid": 0
     },
     {
       "id": "as14",
@@ -118,7 +170,8 @@
       "brand": "Jeep",
       "color": "Gold",
       "price": 32000,
-      "image": "images/Jeep.jpeg"
+      "image": "images/Jeep.jpeg",
+      "bid": 0
     },
     {
       "id": "as15",
@@ -126,7 +179,8 @@
       "brand": "Subaru",
       "color": "Silver",
       "price": 28000,
-      "image": "images/Subaru.jpeg"
+      "image": "images/Subaru.jpeg",
+      "bid": 0
     },
     {
       "id": "as16",
@@ -134,7 +188,8 @@
       "brand": "Mercedes-Benz",
       "color": "Black",
       "price": 45000,
-      "image": "images/Mercedes.jpeg"
+      "image": "images/Mercedes.jpeg",
+      "bid": 0
     },
     {
       "id": "as17",
@@ -142,7 +197,8 @@
       "brand": "Volkswagen",
       "color": "White",
       "price": 29000,
-      "image": "images/Volkswagen.jpeg"
+      "image": "images/Volkswagen.jpeg",
+      "bid": 0
     },
     {
       "id": "as18",
@@ -150,7 +206,8 @@
       "brand": "Kia",
       "color": "Red",
       "price": 22000,
-      "image": "images/Kia.jpeg"
+      "image": "images/Kia.jpeg",
+      "bid": 0
     },
     {
       "id": "as19",
@@ -158,7 +215,8 @@
       "brand": "Honda",
       "color": "Yellow",
       "price": 37000,
-      "image": "images/Honda.jpeg"
+      "image": "images/Honda.jpeg",
+      "bid": 0
     },
     {
       "id": "as20",
@@ -166,7 +224,8 @@
       "brand": "Audi",
       "color": "Blue",
       "price": 43000,
-      "image": "images/Audi.jpeg"
+      "image": "images/Audi.jpeg",
+      "bid": 0
     },
     {
       "id": "as21",
@@ -174,7 +233,8 @@
       "brand": "BMW",
       "color": "Gray",
       "price": 42000,
-      "image": "images/BMW.jpeg"
+      "image": "images/BMW.jpeg",
+      "bid": 0
     },
     {
       "id": "as22",
@@ -182,7 +242,8 @@
       "brand": "Audi",
       "color": "Black",
       "price": 48000,
-      "image": "images/Audi.jpeg"
+      "image": "images/Audi.jpeg",
+      "bid": 0
     },
     {
       "id": "as23",
@@ -190,7 +251,8 @@
       "brand": "Ford",
       "color": "Green",
       "price": 34000,
-      "image": "images/Ford.jpeg"
+      "image": "images/Ford.jpeg",
+      "bid": 0
     },
     {
       "id": "as24",
@@ -198,7 +260,8 @@
       "brand": "Audi",
       "color": "Red",
       "price": 62000,
-      "image": "images/Audi.jpeg"
+      "image": "images/Audi.jpeg",
+      "bid": 0
     },
     {
       "id": "as25",
@@ -206,7 +269,8 @@
       "brand": "Pontiac",
       "color": "Purple",
       "price": 21000,
-      "image": "images/Pontiac.jpeg"
+      "image": "images/Pontiac.jpeg",
+      "bid": 0
     },
     {
       "id": "as26",
@@ -214,7 +278,8 @@
       "brand": "GMC",
       "color": "Brown",
       "price": 35000,
-      "image": "images/GMC.jpeg"
+      "image": "images/GMC.jpeg",
+      "bid": 0
     },
     {
       "id": "as27",
@@ -222,7 +287,8 @@
       "brand": "Buick",
       "color": "Silver",
       "price": 38000,
-      "image": "images/Buick.jpeg"
+      "image": "images/Buick.jpeg",
+      "bid": 0
     },
     {
       "id": "as28",
@@ -230,7 +296,8 @@
       "brand": "Kia",
       "color": "Blue",
       "price": 22000,
-      "image": "images/Kia.jpeg"
+      "image": "images/Kia.jpeg",
+      "bid": 0
     },
     {
       "id": "as29",
@@ -238,7 +305,8 @@
       "brand": "Mazda",
       "color": "White",
       "price": 23000,
-      "image": "images/Mazda.jpeg"
+      "image": "images/Mazda.jpeg",
+      "bid": 0
     },
     {
       "id": "as30",
@@ -246,7 +314,8 @@
       "brand": "Jeep",
       "color": "Gray",
       "price": 36000,
-      "image": "images/Jeep.jpeg"
+      "image": "images/Jeep.jpeg",
+      "bid": 0
     },
     {
       "id": "as31",
@@ -254,7 +323,8 @@
       "brand": "Audi",
       "color": "Black",
       "price": 55000,
-      "image": "images/Audi.jpeg"
+      "image": "images/Audi.jpeg",
+      "bid": 0
     },
     {
       "id": "as32",
@@ -262,7 +332,8 @@
       "brand": "Honda",
       "color": "Brown",
       "price": 34000,
-      "image": "images/Honda.jpeg"
+      "image": "images/Honda.jpeg",
+      "bid": 0
     },
     {
       "id": "eca2",
@@ -270,7 +341,8 @@
       "model": "Tonale",
       "color": "red",
       "price": 46000,
-      "image": "https://upload.wikimedia.org/wikipedia/en/2/2a/Alfa_Romeo_logo.png"
+      "image": "https://upload.wikimedia.org/wikipedia/en/2/2a/Alfa_Romeo_logo.png",
+      "bid": 0
     }
   ]
 }

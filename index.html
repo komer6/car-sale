@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,11 @@
       gap: 20px;
       padding: 20px;
     }
+
+    h1 {
+      text-align: center;
+    }
+
     .card {
       width: 100%;
       max-width: 18rem;
@@ -24,26 +30,32 @@
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+
     .card-img-top {
       width: 100%;
       height: 150px;
       object-fit: cover;
     }
+
     .card-body {
       padding: 15px;
     }
+
     .card-title {
       font-size: 1.25rem;
       margin-bottom: 10px;
     }
+
     .card-text {
       font-size: 1rem;
       margin-bottom: 10px;
     }
+
     .btn {
       display: inline-block;
       padding: 10px 15px;
@@ -56,12 +68,22 @@
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
+
+    .headliner {
+      width: 100vw;
+      background-color: whitesmoke;
+      border-color: #007bff;
+      border-radius: 20px;
+    }
+
     .btn:hover {
       background-color: #0056b3;
     }
+
     #carsale {
       margin: 20px;
     }
+
     #carsale button {
       padding: 10px 20px;
       font-size: 1rem;
@@ -72,18 +94,44 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
+
     #carsale button:hover {
       background-color: #218838;
     }
   </style>
 </head>
+
 <body>
+  <div class="headliner">
+    <h1>GARAGE SALE</h1>
+  </div>
   <div id="carsale">
     <button onclick="carsalefun()">Looking to sell your car?</button>
   </div>
   <div id="display" class="sss"></div>
   <script>
+
     const SERVER = "http://localhost:3000/cars/";
+
+
+
+
+
+
+
+    bid = async (cariden) => {
+
+      let curbid = await axios(`${SERVER}${cariden}`);
+      let inputElement = document.getElementById(`bidder${cariden}`);
+      let namer = inputElement ? parseFloat(inputElement.value) : 0;
+      curbid.data.bid = curbid.data.bid > namer ? curbid.data.bid : namer
+      axios.put(`${SERVER}${cariden}`,curbid)
+    }
+
+
+
+
+
 
     // Function to add car data to the "carsale" div
     function addcar() {
@@ -102,27 +150,30 @@
         price: Number(carprice.value),
         image: carimg.value
       })
-      .then(res => {
-        console.log('Car added:', res.data);
-        writedata(); // Refresh the display after adding the car
-      })
-      .catch(err => {
-        console.error('Error adding car:', err);
-      });
+        .then(res => {
+          console.log('Car added:', res.data);
+          writedata(); // Refresh the display after adding the car
+        })
+        .catch(err => {
+          console.error('Error adding car:', err);
+        });
 
       carsale.innerHTML = '<button onclick="carsalefun()">Looking to sell your car?</button>';
     }
 
-    del = (carId) =>
-    {
-       
+    del = (carId) => {
+
       axios.delete(`${SERVER}${carId}`)
         .then(response => {
           console.log('Car deleted successfully:', response.data);
-          writedata(); 
+          writedata();
         })
     }
-
+    const writeimghea = async () => {
+      const res = await axios.get(SERVER);
+      const display = document.getElementById('display');
+      display.innerHTML = res.data.map(car => ``)
+    }
     const writedata = async () => {
       try {
         const res = await axios.get(SERVER);
@@ -134,6 +185,10 @@
               <h5 class="card-title">${car.brand} ${car.model}</h5>
               <p class="card-text">${car.price}$ Color: ${car.color}</p>
               <a href="#" onclick="del('${car.id}')" class="btn">BUY NOW!</a>
+              <p class="card-text">
+              <a href="#" onclick="bid('${car.id}')" class="btn">Place bid</a>
+              <input type="number" id="bidder${car.id}">
+              </p>
             </div>
           </div>
         `).join('');
@@ -148,7 +203,7 @@
       const carsale = document.getElementById('carsale');
       carsale.innerHTML = `
         <div class="card" style="width: 18rem;">
-          <img class="" src="images/money.jpeg" alt="Card image cap">
+          <img class="" src="images/money.jpeg" style="width:100%;" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Goodbye car, hello CASH</h5>
             <p class="card-text">Model: <input id="carmodel"></p>
@@ -157,15 +212,17 @@
             <p class="card-text">Color: <input id="carcolor"></p>
             <p class="card-text">Image URL: <input id="carimg"></p>
             <a href="#" class="btn" onclick="addcar()">SUBMIT</a>
-            <a href="#" class="btn" onclick="addcar()">SUBMIT</a>
           </div>
         </div>
       `;
     }
 
 
-    price Changer 
+    priceerChanger = () => {
+
+    }
   </script>
- 
+
 </body>
+
 </html>
